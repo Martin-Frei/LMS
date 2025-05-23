@@ -51,4 +51,17 @@
 
     <div>
         <h2>Manage Book LMS</h2>
+
+
+        <table>
+            <tr><th>Serial Nr.</th><th>Bookname</th><th>ISBN</th></tr>
+        {% for book, isbn in bookDetail  %}
+                {% if not forloop.counter == 3 %}
+                <tr>
+                <td>{{ forloop.counter }}</td><td>{{ book }}</td> <td> {{ isbn }} </td>
+                </tr>
+                {% endif %}
+        {% endfor %}
+    
+        </table>
     </div>
