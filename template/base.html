@@ -1,0 +1,69 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header{
+         display: flex;
+         justify-content: center;
+         gap: 32px;
+         margin: 50px 0;
+         padding-bottom: 50px;
+         border-bottom: 5px solid black;
+    }
+    
+    .main h1{
+        font-size: 48px; 
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav a{
+        font-size: 24px;
+    }
+</style>
+<body>
+    <header>
+        <div class="main">
+            <h1>The Library Management System</h1>
+        </div>
+        
+        <div class="nav">
+            
+            <a href="{% url 'manage_books' %}">Manage Books</a>
+            <a href="{% url 'manage_rentals' %}">Manage Rentals</a>
+            <a href="{% url 'manage_time' %}">Manage Rent Time</a>
+            <a href="{% url 'alerts' %}">Alert System</a>
+            <a href="{% url 'manage_user' %}">Manage User</a>
+        </div>
+    {% block title %}
+
+    {% endblock %}  
+    </header>
+<div class="sidebar">
+    {% block side %}
+
+    {% endblock %}  
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+<footer>This is footer </footer>
+<body>
+    
+</body>
+</html>

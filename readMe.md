@@ -1,6 +1,7 @@
 # 📚 Library Management System (LMS)
 
-A simple web-based Library Management System built with [Django](https://www.djangoproject.com/). This project helps manage books, users, borrowings, and alert notifications.
+A simple web-based Library Management System built with [Django](https://www.djangoproject.com/). 
+This project helps manage books, users, borrowings, and alert notifications.
 
 ---
 
