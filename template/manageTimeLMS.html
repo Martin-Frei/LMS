@@ -1,54 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS</title>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+{% extends 'base.html' %}
 
-    header{
-         display: flex;
-         justify-content: center;
-         gap: 32px;
-         margin: 50px 0;
-         padding-bottom: 50px;
-         border-bottom: 5px solid black;
-    }
-    
-    .main h1{
-        font-size: 48px; 
-    }
-    .nav{
-        display: flex;
-        flex-direction: column;
-    }
-    .nav a{
-        font-size: 24px;
-    }
-</style>
-<body>
-    <header>
-        <div class="main">
-            <h1>The Library Management System</h1>
-        </div>
-        
-        <div class="nav">
-            <a href="{% url 'main' %}">Startseite</a>
-            <a href="{% url 'manage_books' %}">Manage Books</a>
-            <a href="{% url 'manage_rentals' %}">Manage Rentals</a>
-           
-            <a href="{% url 'alerts' %}">Alert System</a>
-            <a href="{% url 'manage_user' %}">Manage User</a>
-        </div>
-    </header>
 
-    <div>
-        <h2>Manage Times LMS</h2>
-    </div>
+{% block content %}
+
+<H2>This will be the Manage Time Page</H2>
+
+
+{% endblock %}
