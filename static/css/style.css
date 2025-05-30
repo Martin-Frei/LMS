@@ -1,0 +1,26 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header{
+         display: flex;
+         justify-content: center;
+         gap: 32px;
+         margin: 50px 0;
+         padding-bottom: 50px;
+         border-bottom: 5px solid black;
+    }
+    
+    .main h1{
+        font-size: 48px; 
+        color: red;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav a{
+        font-size: 24px;
+    }

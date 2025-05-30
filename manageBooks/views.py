@@ -22,5 +22,5 @@ def manageBook(request):
 
 def index(request):
     context ={}
-    return render(request,'mainLMS.html', context )
+    return render(request,'base.html', context )
 
