@@ -2,11 +2,14 @@ Django-Projekt Setup & Workflow
 1️⃣ Django-Projekt erstellen
 django-admin startproject projektname
 
+
 2️⃣ Virtuelle Umgebung starten
 C:\Users\Martin\VSCode\venv\Scripts\activate
 
+
 3️⃣ App erstellen
 python manage.py startapp appname
+
 
 4️⃣ App in settings.py registrieren
 INSTALLED_APPS = [
@@ -16,23 +19,27 @@ INSTALLED_APPS = [
     'appname',  # ← Hier jede deiner Apps eintragen
 ]
 
+
 5️⃣ BASE_DIR in settings.py kontrollieren / setzen
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 6️⃣ Funktionen in views.py der jeweiligen App schreiben
 from django.shortcuts import render
 
-# Beispiel für eine einfache View-Funktion
-def funktionname(request):
-    # Logik hinzufügen
-    pass
+# Beispiel für eine einen Kommentar
+from django.http import HttpResponse
+
+def addBook(request):
+    return HttpResponse(" First Comment")
 
 # Beispiel für eine View mit Template-Rendering
 def funktionname(request):
     context = {}
     return render(request, 'templatename.html', context)
+
 
 7️⃣ URLs in urls.py registrieren
 from appname import views as appname_views
@@ -41,9 +48,11 @@ from django.urls import path # Wichtig: path importieren, falls noch nicht gesch
 urlpatterns = [
     path('route/', appname_views.funktionname, name='url_name'),
 ]
+# Hinweise
 # route: Pfad in der URL, z.B. http://127.0.0.1:8008/route/
 # view: Funktion in views.py, die aufgerufen wird, z.B. appname_views.funktionname
 # name: URL-Name zum Verweisen im Template, z.B. {% url 'url_name' %}
+
 
 8️⃣ Statische Dateien organisieren
 Ordnerstruktur:
@@ -54,21 +63,26 @@ static/
 ├── img/
 └── js/
 
-In settings.py statische Dateien registrieren:
+# In settings.py statische Dateien registrieren:
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
 9️⃣ Templates erstellen
 Ordner templates/ im Projektverzeichnis anlegen
 
-Grundtemplate (base.html) erstellen
+Grundtemplate (base.html) erstellen  ==> RoadmapHTML.md
 
 Weitere Templates für einzelne Views anlegen
 
-🔟 Virtuelle Umgebung aktivieren (zur Erinnerung)
+Virtuelle Umgebung aktivieren (zur Erinnerung, falls oben noch nicht gemacht)
 C:\Users\Martin\VSCode\venv\Scripts\activate
+
+🔟 Admin und Superuser anlegen
+python manage.py createsuperuser
+
 
 1️⃣1️⃣ Entwicklungsserver starten
 python manage.py runserver 8008

@@ -54,10 +54,10 @@
     {% block navbar %}
     <nav>
         <a href="{% url 'URLName1' %}">Start</a>
-        <a href="{% url 'URLName1' %}">URLName2</a>
-        <a href="{% url 'URLName1' %}">URLName3</a>
-        <a href="{% url 'URLName1' %}">URLName4/a>
-        <a href="{% url 'URLName1' %}">URLName5<a>
+        <a href="{% url 'URLName2' %}">URLName2</a>
+        <a href="{% url 'URLName3' %}">URLName3</a>
+        <a href="{% url 'URLName4' %}">URLName4/a>
+        <a href="{% url 'URLName5' %}">URLName5<a>
     </nav>
     {% endblock %}
 
