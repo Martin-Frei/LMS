@@ -1,10 +1,13 @@
 Django-Projekt Setup & Workflow
-1️⃣ Django-Projekt erstellen
-django-admin startproject projektname
 
 
-2️⃣ Virtuelle Umgebung starten
+
+1️⃣  Virtuelle Umgebung starten
 C:\Users\Martin\VSCode\venv\Scripts\activate
+
+
+2️⃣ Django-Projekt erstellen
+django-admin startproject projektname
 
 
 3️⃣ App erstellen
@@ -25,6 +28,19 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+
+Jede App in settings.px regestrien
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
 
 6️⃣ Funktionen in views.py der jeweiligen App schreiben
 from django.shortcuts import render
@@ -90,11 +106,20 @@ python manage.py runserver 8008
 
 django-admin startproject projektname
 
-venv starten 
-C:\Users\Martin\VSCode\venv\Scripts  activate
+
+next
+models 
+plan the model what you need 
+create the model in model.py
+makemigrations 
+migrate
+optinal regestred in admin.py 
+
+f
 
 
-python manage.py startapp appname
+
+
 
 
 
