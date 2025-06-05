@@ -7,3 +7,5 @@ from django.shortcuts import render
 def manageAlerts(request):
     context ={}
     return render(request,'manageAlertsLMS.html', context )
+
+
