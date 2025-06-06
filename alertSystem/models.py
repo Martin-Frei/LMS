@@ -9,5 +9,5 @@ class alert(models.Model):
     alertTitle = models.CharField(max_length=150)
     alertText = models.TextField()
     alertType = models.CharField(max_length=15)
-    alertTimestamp = models.DateTimeField()
-    isActive = models.BooleanField()
+    alertTimestamp = models.DateTimeField(auto_now = True)
+    isActive = models.BooleanField(default = True)

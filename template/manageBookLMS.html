@@ -1,31 +1,27 @@
-{% extends 'base.html' %}
-{% load static %}
-
+{% extends 'base.html' %} 
+{% load static %} 
 {% block title %}
 
 <h1>Manage Book</h1>
 
+{% endblock %} 
+{% block side %}
+<h2>This Data for the side</h2>
+
 {% endblock %}
-
-{% side %}
-<h2>This Data for the side </h2>
-
-{% endblock %}
-
-
-
-
 
 {% block content %}
 
+<div>
+  <h2>Manage Book LMS</h2>
+  <form method="POST">
+    {%csrf_token%} 
+    {{ manageBook }}
 
+    <button type="submit">Submit</button>
+  </form>
 
-
-    <div>
-        <h2>Manage Book LMS</h2>
-
-
-        <table>
+  <!-- <table>
             <tr><th>Serial Nr.</th><th>Bookname</th><th>ISBN</th></tr>
         {% for book, isbn in bookDetail  %}
                 {% if not forloop.counter == 3 %}
@@ -35,7 +31,7 @@
                 {% endif %}
         {% endfor %}
     
-        </table>
-    </div>
-    
+        </table> -->
+</div>
+
 {% endblock %}

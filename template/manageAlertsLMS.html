@@ -7,14 +7,21 @@
 
 {% endblock %}
 
-{% side %}
+{% block side %}
 <h2>This Data for the side </h2>
+
+
 
 {% endblock %}
 
 
 {% block content %}
 <h2>This is the Alert </h2>
-<img src="{% static 'img/cola.jpg' %}" alt="">
+<form method="POST">
+ {% csrf_token %}
+    {{alerts}}
+    <button type="submit">Save it</button>
+</form>
+
 
 {% endblock %}
