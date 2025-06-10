@@ -8,7 +8,7 @@ class bookRecord(models.Model):
     bookAuthor= models.CharField( max_length=100)
     bookYear = models.IntegerField()
     isbn = models.IntegerField()
-    isActive = models.BooleanField()
+    isActive = models.BooleanField(default=True)
     
     
     

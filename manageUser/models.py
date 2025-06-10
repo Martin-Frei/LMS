@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class user (models.Model):
+class user(models.Model):
     id = models.IntegerField(primary_key=True)
     userTyp = models.CharField(max_length=10)
     userGender = models.CharField(max_length=10)

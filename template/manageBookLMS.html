@@ -16,22 +16,18 @@
   <h2>Manage Book LMS</h2>
   <form method="POST">
     {%csrf_token%} 
-    {{ manageBook }}
+    {{ manage_Book }}
 
     <button type="submit">Submit</button>
   </form>
 
-  <!-- <table>
-            <tr><th>Serial Nr.</th><th>Bookname</th><th>ISBN</th></tr>
-        {% for book, isbn in bookDetail  %}
-                {% if not forloop.counter == 3 %}
-                <tr>
-                <td>{{ forloop.counter }}</td><td>{{ book }}</td> <td> {{ isbn }} </td>
-                </tr>
-                {% endif %}
-        {% endfor %}
-    
-        </table> -->
+<table>
+  <th>Name</th><th>Author</th><th>Year</th><th>ISBN</th>
+  {% for i in bookDB %}
+<tr><td>{{i.bookName}}</td><td>{{i.bookAuthor}}</td><td>{{i.bookYear}}</td><td>{{i.isbn}}</td>
+</tr>
+{% endfor %}
+</table>
 </div>
 
 {% endblock %}

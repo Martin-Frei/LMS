@@ -26,14 +26,14 @@ from manageUser import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', book_views.index, name='main'),
+    # path('', book_views.index, name='main'),
 
-    path('addBook', book_views.addBook, name='add_book'),
-    path('removeBook', book_views.removeBook, name='remove_book'),
+    # path('addBook', book_views.addBook, name='add_book'),
+    # path('removeBook', book_views.removeBook, name='remove_book'),
 
-    path('manageBooks', book_views.manageBook, name='manage_books'),
+    path('manageBooks', book_views.index, name='manage_books'),
     path('manageRentals', rental_views.manageRentals, name='manage_rentals'),
     path('manageRentTime', time_views.manageRentTime, name='manage_time'),
     path('manageAlerts', alert_views.manageAlerts, name='alerts'),
-    path('manageUser', user_views.manageUser, name='manage_user'),
+    path('manageUser', user_views.manageUser, name='manage_user')
 ]
